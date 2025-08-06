@@ -1,5 +1,10 @@
  ## 📌 Phishing Characteristics 
-
+1. Spoofed sender address: “secure-paypal-support.com” is not a valid PayPal domain. 
+2. Urgent tone and threats: It pressures the user with a 24-hour deadline. 
+3. Suspicious URL: The link does not point to the real PayPal domain. 
+4. Generic gree ng: No personal name is used (just “Dear Customer”). 
+5. Fake a achments: A achments like “Update_Form.html” are o en malicious. 
+6. Bad grammar and forma ng: Real PayPal emails are professionally wri en. 
 ### 4️⃣ Suspicious Links or Attachments
 
 **[Link Presented](https://apple-id-confirmation.com/secure)**
