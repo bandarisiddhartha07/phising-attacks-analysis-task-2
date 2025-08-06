@@ -1,0 +1,84 @@
+Sample phishing email
+
+Spoofed sender address analysis
+
+Header discrepancies
+
+Mail header sample
+
+Conclusion and recommendations
+
+✅ Here's the additional content to include in your PDF report:
+📄 Additional Section: Phishing Email Sample & Header Analysis
+🧪 1. Sample Phishing Email
+sql
+Copy
+Edit
+From: "Apple Support" <no-reply@apple-secure-login.com>  
+To: user@example.com  
+Subject: Your Apple ID is Locked – Verify Now
+
+Dear Customer,
+
+We detected suspicious activity in your Apple account. To protect your information, we have temporarily locked your Apple ID.
+
+To restore access, please verify your account using the link below:
+
+👉 https://apple-id-confirmation.com/secure
+
+If we don’t hear from you within 24 hours, your account will be permanently disabled.
+
+Thank you,  
+Apple Security Team
+🕵️‍♂️ 2. Sender Email Address Analysis
+Field	Value	Observation
+From	no-reply@apple-secure-login.com	Spoofed domain mimicking Apple
+Display Name	Apple Support	Legit-sounding, easily faked
+Reply-To	Not shown, often differs	Used to misdirect replies to attacker-controlled email
+
+Conclusion: The sender address uses domain spoofing to mislead the recipient.
+
+📥 3. Email Header Sample
+Paste this into https://mailheader.org:
+
+vbnet
+Copy
+Edit
+Return-Path: <no-reply@apple-secure-login.com>
+Received: from mail.fakehost.net (mail.fakehost.net [203.0.113.45])
+    by inbound.example.com with ESMTP id ABC123XYZ;
+    Wed, 6 Aug 2025 10:00:45 +0530
+Received-SPF: fail (example.com: domain of apple-secure-login.com does not designate 203.0.113.45 as permitted sender)
+From: "Apple Support" <no-reply@apple-secure-login.com>
+To: user@example.com
+Subject: Your Apple ID is Locked – Verify Now
+Message-ID: <apple-id123@fakehost.net>
+Date: Wed, 6 Aug 2025 10:00:43 +0530
+MIME-Version: 1.0
+Content-Type: text/html
+🧪 4. Header Discrepancy Analysis
+Field	Discrepancy
+SPF Check	FAIL – IP not authorized to send from that domain
+Return-Path	Non-Apple domain used (apple-secure-login.com)
+Message-ID	Not from Apple servers (fakehost.net)
+Mail Server IP	Unfamiliar server (203.0.113.45)
+
+🔒 5. Final Conclusion
+This email is a clear phishing attempt, using:
+
+Spoofed sender domain
+
+Fake urgency
+
+Invalid SPF (as shown in header)
+
+Misleading display name
+
+✅ Recommended Actions
+Do not interact with links or reply
+
+Report to IT/security team
+
+Use header analysis tools to verify legitimacy
+
+Implement DMARC/SPF/DKIM policies organization-wide
